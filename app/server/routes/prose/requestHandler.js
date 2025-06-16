@@ -13,7 +13,7 @@ marked.use(
 /**
  * Get HTML with GOV.UK styles for a Markdown content file.
  * @param {import('node:fs').PathLike} path Path to a .md file
- * @returns {string} HTML for the content with GOV.UK typography classes
+ * @returns {Promise<string>} HTML for the content with GOV.UK typography classes
  */
 async function renderContent(path) {
   const markdown = await readFile(path, {
@@ -30,7 +30,7 @@ async function renderContent(path) {
  * @param {import('express').Request} req
  * @param {import('express').Response} res
  * @param {import('express').NextFunction} next
- * @returns {void}
+ * @returns {Promise<void>}
  */
 async function requestHandler(req, res, next) {
   try {

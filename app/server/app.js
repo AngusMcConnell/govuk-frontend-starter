@@ -163,7 +163,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", async (req, res, next) => {
+app.get("/", (req, res, next) => {
   try {
     res.render("homepage.njk");
   } catch (err) {

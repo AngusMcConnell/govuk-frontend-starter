@@ -236,7 +236,7 @@ test.describe("Accessibility testing for juggling license service", () => {
     await errorLink.click();
     const fieldset = page.locator("fieldset");
     await expect
-      .poll(async () => {
+      .poll(() => {
         return fieldset.evaluate(
           (el) =>
             document.activeElement === el ||

@@ -1,7 +1,7 @@
 const { matchedData, validationResult } = require("express-validator");
 const { determineBackLink, formatValidationErrors } = require("../utils");
 
-module.exports = async (req, res, next) => {
+module.exports = (req, res, next) => {
   try {
     if (req.session.data == null) {
       req.session.data = {};

@@ -1,6 +1,6 @@
 const { determineBackLink } = require("../utils");
 
-module.exports = async (req, res, next) => {
+module.exports = (req, res, next) => {
   try {
     const backLinkUrl = determineBackLink(req, "/apply-juggling-license/start");
 
