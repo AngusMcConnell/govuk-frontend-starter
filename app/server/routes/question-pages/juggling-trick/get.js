@@ -1,6 +1,6 @@
 const { determineBackLink } = require("../utils");
 
-module.exports = async (req, res, next) => {
+module.exports = (req, res, next) => {
   try {
     if (req.session.data == null) {
       throw new Error(
