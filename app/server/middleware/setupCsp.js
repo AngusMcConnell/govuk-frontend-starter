@@ -36,7 +36,7 @@ const setupCsp = (app) => {
             "https://*.googletagmanager.com",
           ],
           // HACK: https://github.com/helmetjs/helmet/issues/480
-          ...(process.env.NODE_ENV === "development" && {
+          ...(process.env.CI === "true" && {
             upgradeInsecureRequests: null,
           }),
         },
