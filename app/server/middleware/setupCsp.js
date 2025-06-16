@@ -35,6 +35,10 @@ const setupCsp = (app) => {
             "https://*.analytics.google.com",
             "https://*.googletagmanager.com",
           ],
+          // HACK: https://github.com/helmetjs/helmet/issues/480
+          ...(process.env.NODE_ENV === "development" && {
+            upgradeInsecureRequests: null,
+          }),
         },
       },
       crossOriginEmbedderPolicy: true,
