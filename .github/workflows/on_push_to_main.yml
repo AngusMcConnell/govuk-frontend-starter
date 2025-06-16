@@ -9,6 +9,7 @@ name: Handle push to `main`
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 jobs:
   sast:
