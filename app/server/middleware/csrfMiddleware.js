@@ -1,5 +1,5 @@
 const { createId } = require("@paralleldrive/cuid2");
-const debug = require("debug")("apply-juggling-license:csrfMiddlware");
+const debug = require("debug")("apply-juggling-license:middleware:csrf");
 const crypto = require("node:crypto");
 
 const config = require("../config.js");
