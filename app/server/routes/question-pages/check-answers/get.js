@@ -1,3 +1,11 @@
+/**
+ * Render the check answers page.
+ *
+ * @param {import('express').Request} req
+ * @param {import('express').Response} res
+ * @param {import('express').NextFunction} next
+ * @returns {void}
+ */
 module.exports = (req, res, next) => {
   try {
     if (req.session.data == null) {

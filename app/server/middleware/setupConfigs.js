@@ -4,7 +4,7 @@ const config = require("../config.js");
  * Middleware setup function to attach configuration settings to response locals.
  * This makes config values accessible in all templates rendered by the app.
  *
- * @param {object} app - The Express application instance.
+ * @param {import('express').Application} app - The Express application instance.
  */
 const setupConfig = (app) => {
   /**

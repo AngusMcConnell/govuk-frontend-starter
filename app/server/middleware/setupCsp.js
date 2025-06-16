@@ -3,7 +3,7 @@ const helmet = require("helmet");
 /**
  * Sets up Helmet middleware for the Express application to configure Content Security Policy (CSP).
  *
- * @param {object} app - The Express application instance.
+ * @param {import('express').Application} app - The Express application instance.
  */
 const setupCsp = (app) => {
   app.use(

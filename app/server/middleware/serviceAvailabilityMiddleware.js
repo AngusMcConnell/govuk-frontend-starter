@@ -8,6 +8,10 @@ const {
 } = require("date-fns");
 const createError = require("http-errors");
 
+/**
+ * Check if the service is available based on environment variables.
+ * @returns {boolean}
+ */
 function isServiceAvailable() {
   if (process.env.SERVICE_UNAVAILABLE_START == null) {
     return true;
@@ -50,6 +54,7 @@ function isServiceAvailable() {
 }
 
 /**
+ * Create a message indicating when the service will be available.
  * @param {Date | undefined} serviceAvailableFrom
  * @returns {string}
  */

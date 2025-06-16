@@ -8,8 +8,7 @@ const path = require("node:path");
  * Set up user-defined static assets from the /assets directory.
  *
  * @param {import('express').Application} app - The Express app
- * @param {object} config
- * @param {string} config.paths.static - The path for serving user static files
+ * @param {AssetsConfig} config
  */
 function setupUserAssets(app, config) {
   // Serve static files from the user-defined assets directory
@@ -101,7 +100,7 @@ function setupLibraryAssets(app) {
  * Sets up both user assets and library assets
  *
  * @param {import('express').Application} app - The Express app
- * @param {object} config
+ * @param {AssetsConfig} config
  */
 function setupStaticAssets(app, config) {
   setupUserAssets(app, config);
@@ -109,3 +108,9 @@ function setupStaticAssets(app, config) {
 }
 
 module.exports = { setupStaticAssets };
+
+/**
+ * Configuration for static assets.
+ * @typedef {Object} AssetsConfig
+ * @property {string} paths.static - The path for serving user static files.
+ */
