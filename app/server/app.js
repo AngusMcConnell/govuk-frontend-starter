@@ -6,6 +6,11 @@ const createError = require("http-errors");
 const logger = require("morgan");
 const promBundle = require("express-prom-bundle");
 
+// HACK: https://github.com/remy/nodemon/issues/2248
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 const config = require("./config");
 const {
   activeNavigationMiddleware,
