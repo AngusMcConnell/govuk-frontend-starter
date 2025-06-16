@@ -1,4 +1,4 @@
-const debug = require("debug")("apply-juggling-license:htmx");
+const debug = require("debug")("apply-juggling-license:middleware:htmx");
 
 /**
  * A configuration object for HTMX. Each property is optional; if not provided,

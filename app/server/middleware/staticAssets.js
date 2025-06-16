@@ -1,4 +1,6 @@
-const debug = require("debug")("apply-juggling-license:staticAssets");
+const debug = require("debug")(
+  "apply-juggling-license:middleware:staticAssets",
+);
 const express = require("express");
 const path = require("node:path");
 

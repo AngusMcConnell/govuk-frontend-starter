@@ -108,10 +108,10 @@ function closeGracefully(signal) {
   console.log(`*^!@4=> Received signal to terminate: ${signal}`);
 
   server.close(() => {
-    console.debug("HTTP server closed");
+    debug("HTTP server closed");
   });
   adminServer.close(() => {
-    console.debug("admin server closed");
+    debug("admin server closed");
   });
   process.exit();
 }
