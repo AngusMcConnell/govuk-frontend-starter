@@ -1,3 +1,10 @@
+/**
+ * Set the user's cookie preferences in a cookie.
+ *
+ * @param {import('express').Response} res - Response object
+ * @param {CookiePreferences} preferences - The user's cookie preferences
+ * @returns {void}
+ */
 function setCookiePreferences(res, preferences) {
   res.cookie(
     "cookie_policy",
@@ -18,3 +25,8 @@ function setCookiePreferences(res, preferences) {
 }
 
 module.exports = setCookiePreferences;
+
+/** A user's cookie preferences for this service.
+ * @typedef {Object} CookiePreferences
+ * @property {boolean} analytics - Whether the user has opted in to analytics.
+ */
