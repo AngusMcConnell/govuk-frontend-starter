@@ -148,7 +148,7 @@ jobs:
           retention-days: 1
 
   merge-reports:
-    # Merge reports after playwright-tests, even if some shards have failed
+    name: Merge Playwright reports
     if: ${{ !cancelled() }}
     needs: [playwright-tests]
 
