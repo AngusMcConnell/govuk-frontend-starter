@@ -1,4 +1,3 @@
-/* eslint-env browser */
 const hideButton = document.querySelector(".js-hide");
 const cookieBanner = document.querySelector(".govuk-cookie-banner");
 const confirmationBanner = document.querySelector(".js-confirmation-banner");
