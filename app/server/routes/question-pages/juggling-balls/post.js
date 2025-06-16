@@ -1,6 +1,14 @@
 const { matchedData, validationResult } = require("express-validator");
 const { determineBackLink, formatValidationErrors } = require("../utils");
 
+/**
+ * Handle form submission for the 'How many balls can you juggle?' page.
+ *
+ * @param {import('express').Request} req
+ * @param {import('express').Response} res
+ * @param {import('express').NextFunction} next
+ * @returns {void}
+ */
 module.exports = (req, res, next) => {
   try {
     if (req.session.data == null) {

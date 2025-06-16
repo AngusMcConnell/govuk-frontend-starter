@@ -37,8 +37,10 @@ adminServer.on("listening", onListening);
 
 /**
  * Normalise a port into a number, string, or false.
+ *
+ * @param {string} val
+ * @returns {string | number | false}
  */
-
 function normalisePort(val) {
   const port = parseInt(val, 10);
 
@@ -57,8 +59,10 @@ function normalisePort(val) {
 
 /**
  * Event listener for HTTP server "error" event.
+ *
+ * @param {SystemError} error
+ * @returns {void}
  */
-
 function onError(error) {
   if (error.syscall !== "listen") {
     throw error;
@@ -86,8 +90,9 @@ function onError(error) {
 
 /**
  * Event listener for HTTP server "listening" event.
+ *
+ * @returns {void}
  */
-
 function onListening() {
   const addr = server.address();
   if (addr === null) {
@@ -99,11 +104,23 @@ function onListening() {
   debug(`Listening on ${bind}`);
 }
 
+/**
+ * Handle SIGHUP signal.
+ *
+ * @param {signal} string
+ * @returns {void}
+ */
 function handle(signal) {
   console.log(`*^!@4=> Received event: ${signal}`);
 }
 process.on("SIGHUP", handle);
 
+/**
+ * Handle graceful shutdown on SIGINT or SIGTERM signals.
+ *
+ * @param {signal} string
+ * @returns {void}
+ */
 function closeGracefully(signal) {
   console.log(`*^!@4=> Received signal to terminate: ${signal}`);
 
@@ -126,3 +143,16 @@ process.on("uncaughtException", (err) => {
   console.error(err);
   process.exit(); // exit the process to avoid unknown state
 });
+
+/** Node.js generates system errors when exceptions occur within its runtime environment. These usually occur when an application violates an operating system constraint. For example, a system error will occur if an application attempts to read a file that does not exist.
+ * @typedef {Object} SystemError
+ * @property {string} [address] - The address to which a network connection failed
+ * @property {string} code      - The string error code
+ * @property {string} [dest]    - The file path destination when reporting a file system error
+ * @property {number} errno     - The system-provided error number
+ * @property {Object} [info]    - Extra details about the error condition
+ * @property {string} message   - A system-provided human-readable description of the error
+ * @property {string} [path]    - The file path when reporting a file system error
+ * @property {number} [port]    - The network connection port that is not available
+ * @property {string} syscall   - The name of the system call that triggered the error
+ */

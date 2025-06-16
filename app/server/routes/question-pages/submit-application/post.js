@@ -1,5 +1,13 @@
 const { init } = require("@paralleldrive/cuid2");
 
+/**
+ * Handle the form submission on the check answers page.
+ *
+ * @param {import('express').Request} req
+ * @param {import('express').Response} res
+ * @param {import('express').NextFunction} next
+ * @returns {void}
+ */
 module.exports = (req, res, next) => {
   try {
     // Do something with the data, for example storing it in a database
