@@ -8,19 +8,19 @@ updates:
     versioning-strategy: increase
     open-pull-requests-limit: 5
     commit-message:
-      prefix: "build(deps):"
-      prefix-development: "build(deps-dev):"
+      prefix: "deps:"
+      prefix-development: "chore:"
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: weekly
     commit-message:
-      prefix: "ci(deps):"
+      prefix: "chore:"
 
   - package-ecosystem: docker
     directory: /
     schedule:
       interval: weekly
     commit-message:
-      prefix: "build(deps):"
+      prefix: "deps:"
