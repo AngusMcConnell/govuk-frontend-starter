@@ -1,15 +1,24 @@
 import js from "@eslint/js";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
+/**
+ * Base linting rules. Adjust to taste.
+ */
 const baseConfig = defineConfig([
   {
     files: ["**/*.js"],
     plugins: {
       js,
     },
-    extends: ["js/recommended"],
+    extends: [
+      // Enable rules that ESLint recommends everyone use to avoid errors
+      "js/recommended",
+      // Turn off all rules that are unnecessary or might conflict with Prettier
+      eslintConfigPrettier,
+    ],
   },
 ]);
 
