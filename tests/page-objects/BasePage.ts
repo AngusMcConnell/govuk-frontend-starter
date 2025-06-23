@@ -16,7 +16,6 @@ export class BasePage {
 
   /**
    * Run accessibility tests on the current page to check for WCAG 2.2 AA violations
-   * @returns {Promise<void>}
    */
   async runAccessibilityTests() {
     const axeBuilder = new AxeBuilder({ page: this.page }).withTags([

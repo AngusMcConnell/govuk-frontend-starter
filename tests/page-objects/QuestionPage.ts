@@ -19,12 +19,6 @@ export class QuestionPage extends BasePage {
   errorSummaryAlert?: Locator;
   errorSummaryLink?: Locator;
 
-  /**
-   * @param {import('@playwright/test').Page} page - Playwright page object
-   * @param {string} pageName - Name of the page for reporting purposes
-   * @param {Object} options - Options for configuring the question page
-   * @param {string} options.errorMessage - Expected error message text
-   */
   constructor(page: Page, pageName: string, options: QuestionPageOptions = {}) {
     super(page, pageName);
 
@@ -72,7 +66,6 @@ export class QuestionPage extends BasePage {
 
   /**
    * Verify validation error appears correctly
-   * @throws {Error} If error handling is not configured
    */
   async verifyValidationError() {
     if (!this.hasErrorHandling()) {
@@ -93,7 +86,6 @@ export class QuestionPage extends BasePage {
 
   /**
    * Verify all accessibility requirements for error summary
-   * @throws {Error} If error handling is not configured
    */
   async verifyErrorSummaryAccessibility() {
     if (!this.hasErrorHandling()) {
@@ -125,7 +117,6 @@ export class QuestionPage extends BasePage {
 
   /**
    * Check if error summary has focus when validation error occurs
-   * @throws {Error} If error handling is not configured
    */
   async checkErrorSummaryHasFocus() {
     if (!this.hasErrorHandling()) {
