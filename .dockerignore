@@ -11,6 +11,7 @@ tests/
 .env.example
 .gitignore
 .nvmrc
+CHANGELOG.md
 Dockerfile
 eslint.config.mjs
 jsconfig.json
