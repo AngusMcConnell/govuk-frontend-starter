@@ -11,7 +11,8 @@ jobs:
     name: Pull request labeller
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v5
+      - name: Label pull request
+        uses: actions/labeler@v5
         with:
           sync-labels: true
 
