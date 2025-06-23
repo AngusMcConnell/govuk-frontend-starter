@@ -12,8 +12,13 @@ permissions:
   issues: write
 
 jobs:
-  sast:
+  code-quality:
+    name: Verify code quality
+    uses: ./.github/workflows/code-quality-checks.yml
+
+  create-release:
     name: Create release
+    needs: code-quality
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
