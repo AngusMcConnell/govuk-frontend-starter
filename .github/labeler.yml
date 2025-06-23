@@ -1,0 +1,35 @@
+---
+bug:
+  - head-branch: ["^fix"]
+
+css:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.css"
+
+docker:
+  - changed-files:
+      - any-glob-to-any-file: "Dockerfile"
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: ["docs/*", "CHANGELOG.md", "README.md"]
+  - head-branch: ["^docs"]
+
+enhancement:
+  - head-branch: ["^feat"]
+
+github_actions:
+  - changed-files:
+      - any-glob-to-any-file: ".github/workflows/*"
+
+javascript:
+  - changed-files:
+      - any-glob-to-any-file: ["**/*.js", "**/*.cjs", "**/*.mjs"]
+
+nunjucks:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.njk"
+
+typescript:
+  - changed-files:
+      - any-glob-to-any-file: "**/*.ts"

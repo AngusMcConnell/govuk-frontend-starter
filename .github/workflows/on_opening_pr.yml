@@ -7,6 +7,14 @@ permissions:
   pull-requests: write
 
 jobs:
+  labeller:
+    name: Pull request labeller
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v5
+        with:
+          sync-labels: true
+
   dependabot:
     name: Dependabot auto-merge
     runs-on: ubuntu-latest
