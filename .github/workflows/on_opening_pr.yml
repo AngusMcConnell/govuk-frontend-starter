@@ -35,6 +35,7 @@ jobs:
           PR_URL: ${{github.event.pull_request.html_url}}
           # PAT triggers workflows; GITHUB_TOKEN doesn't
           GH_TOKEN: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+          GH_DEBUG: api # TEMP
 
       - name: Approve a PR
         if: |
