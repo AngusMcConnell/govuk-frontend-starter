@@ -14,6 +14,12 @@ export class BasePage {
     this.pageName = pageName;
   }
 
+  async verifyPhaseBannerIsPresent() {
+    const phaseBanner = this.page.getByText(/this is a new service/i);
+
+    await expect(phaseBanner).toBeVisible();
+  }
+
   /**
    * Run accessibility tests on the current page to check for WCAG 2.2 AA violations
    */
