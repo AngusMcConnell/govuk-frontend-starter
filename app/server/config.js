@@ -4,7 +4,7 @@ const config = {
   GOOGLE_TAG_ID: process.env.GOOGLE_TAG_ID,
   app: {
     environment: process.env.NODE_ENV || "development",
-    version: require("../../package.json").version, // Managed by release script
+    version: require("../../package.json").version, // Required for cache-busting; assumed to be managed by a release script
   },
   csrf: {
     cookieName: "_csrf",
