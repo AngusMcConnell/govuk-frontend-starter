@@ -32,6 +32,7 @@ export class JugglingBallsPage extends QuestionPage {
   }
 
   async verifyPage() {
+    await this.verifyPhaseBannerIsPresent();
     await expect(this.heading).toHaveText("How many balls can you juggle?");
     return this;
   }

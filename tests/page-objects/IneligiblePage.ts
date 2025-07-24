@@ -10,6 +10,7 @@ export class IneligiblePage extends BasePage {
   }
 
   async verifyPage() {
+    await this.verifyPhaseBannerIsPresent();
     await expect(this.heading).toHaveText("Not eligible");
     return this;
   }

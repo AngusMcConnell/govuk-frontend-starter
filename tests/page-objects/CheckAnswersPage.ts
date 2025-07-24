@@ -21,6 +21,7 @@ export class CheckAnswersPage extends BasePage {
   }
 
   async verifyPage() {
+    await this.verifyPhaseBannerIsPresent();
     await expect(this.heading).toContainText("Check your answers");
     return this;
   }
