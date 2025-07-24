@@ -10,6 +10,7 @@ export class ConfirmationPage extends BasePage {
   }
 
   async verifyPage() {
+    await this.verifyPhaseBannerIsPresent();
     await expect(this.heading).toContainText("Application complete");
     return this;
   }

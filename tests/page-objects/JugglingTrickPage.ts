@@ -20,6 +20,7 @@ export class JugglingTrickPage extends QuestionPage {
   }
 
   async verifyPage() {
+    await this.verifyPhaseBannerIsPresent();
     await expect(this.heading).toHaveText(
       "What is your most impressive juggling trick?",
     );
