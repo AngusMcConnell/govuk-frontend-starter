@@ -24,8 +24,8 @@ updates:
       interval: daily
       timezone: Europe/London
     commit-message:
-      prefix: "deps:"
-      prefix-development: "chore:"
+      prefix: "build(deps):"
+      prefix-development: "chore(deps):"
     groups:
       eslint:
         patterns:

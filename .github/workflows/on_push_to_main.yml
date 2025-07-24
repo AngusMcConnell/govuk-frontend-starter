@@ -15,16 +15,3 @@ jobs:
   code-quality:
     name: Verify code quality
     uses: ./.github/workflows/code-quality-checks.yml
-
-  create-release:
-    name: Create release
-    needs: code-quality
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Create release PR
-        uses: googleapis/release-please-action@v4
-        with:
-          release-type: node
