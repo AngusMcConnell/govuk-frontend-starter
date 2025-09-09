@@ -32,7 +32,7 @@
     "govuk-frontend": "^5.11.2",
     "govuk-markdown": "^0.8.0",
     "helmet": "^8.1.0",
-    "htmx.org": "^2.0.6",
+    "htmx.org": "^2.0.7",
     "http-errors": "^2.0.0",
     "marked": "^16.2.1",
     "morgan": "^1.10.1",
