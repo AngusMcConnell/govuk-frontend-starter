@@ -46,7 +46,7 @@
     "@tsconfig/recommended": "^1.0.10",
     "@types/express": "^5.0.6",
     "@types/govuk-frontend": "^5.11.0",
-    "@types/node": "^22.18.13",
+    "@types/node": "^22.19.5",
     "dotenv": "^17.2.2",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
