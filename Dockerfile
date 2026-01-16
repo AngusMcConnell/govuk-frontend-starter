@@ -1,11 +1,11 @@
 # --------------> The build image
-FROM node:lts@sha256:929c026d5a4e4a59685b3c1dbc1a8c3eb090aa95373d3a4fd668daa2493c8331 AS build
+FROM node:lts@sha256:b2b2184ba9b78c022e1d6a7924ec6fba577adf28f15c9d9c457730cc4ad3807a AS build
 WORKDIR /usr/src/apply-juggling-license
 COPY package*.json /usr/src/apply-juggling-license/
 RUN npm ci --omit=dev
 
 # --------------> The production image
-FROM node:lts-alpine@sha256:c921b97d4b74f51744057454b306b418cf693865e73b8100559189605f6955b8
+FROM node:lts-alpine@sha256:931d7d57f8c1fd0e2179dbff7cc7da4c9dd100998bc2b32afc85142d8efbc213
 RUN apk add --no-cache dumb-init
 ENV NODE_ENV=production
 USER node
