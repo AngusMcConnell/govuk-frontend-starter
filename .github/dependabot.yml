@@ -8,7 +8,7 @@ updates:
       interval: daily
       timezone: Europe/London
     commit-message:
-      prefix: "build:"
+      prefix: "build(deps):"
 
   - package-ecosystem: github-actions
     directory: /
@@ -16,7 +16,7 @@ updates:
       interval: daily
       timezone: Europe/London
     commit-message:
-      prefix: "chore:"
+      prefix: "ci:"
 
   - package-ecosystem: npm
     directory: /
@@ -24,8 +24,8 @@ updates:
       interval: daily
       timezone: Europe/London
     commit-message:
-      prefix: "deps:"
-      prefix-development: "chore:"
+      prefix: "build(deps):"
+      prefix-development: "build(deps-dev):"
     groups:
       eslint:
         patterns:
