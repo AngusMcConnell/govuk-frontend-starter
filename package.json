@@ -47,7 +47,7 @@
     "@types/express": "^5.0.6",
     "@types/govuk-frontend": "^5.11.0",
     "@types/node": "^22.19.8",
-    "dotenv": "^17.2.2",
+    "dotenv": "^17.2.4",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.3.0",
