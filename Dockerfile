@@ -5,7 +5,7 @@ COPY package*.json /usr/src/apply-juggling-license/
 RUN npm ci --omit=dev
 
 # --------------> The production image
-FROM node:lts-alpine@sha256:cd6fb7efa6490f039f3471a189214d5f548c11df1ff9e5b181aa49e22c14383e
+FROM node:lts-alpine@sha256:4f696fbf39f383c1e486030ba6b289a5d9af541642fc78ab197e584a113b9c03
 RUN apk add --no-cache dumb-init
 ENV NODE_ENV=production
 USER node
