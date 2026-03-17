@@ -1,5 +1,5 @@
 # --------------> The build image
-FROM node:lts@sha256:3a09aa6354567619221ef6c45a5051b671f953f0a1924d1f819ffb236e520e6b AS build
+FROM node:lts@sha256:6de4ce7e378695eb6b9acb63a31284207d0bf08429166fbfcb9f6fcb666926a6 AS build
 WORKDIR /usr/src/apply-juggling-license
 COPY package*.json /usr/src/apply-juggling-license/
 RUN npm ci --omit=dev
